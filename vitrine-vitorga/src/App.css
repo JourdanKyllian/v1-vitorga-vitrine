@@ -1,0 +1,50 @@
+.text-golden { 
+  color: #D4AF37; 
+}
+
+.bg-golden { 
+  background-color: #D4AF37; 
+}
+
+.bg-golden\/90 {
+  background-color: rgba(212, 175, 55, 0.9);
+}
+
+.bg-golden\/10 {
+  background-color: rgba(212, 175, 55, 0.1);
+}
+
+.bg-golden\/20 {
+  background-color: rgba(212, 175, 55, 0.2);
+}
+
+.text-vine-green { 
+  color: #2D5016; 
+}
+
+.bg-vine-green { 
+  background-color: #2D5016; 
+}
+
+.bg-vine-green\/90 {
+  background-color: rgba(45, 80, 22, 0.9);
+}
+
+.bg-vine-green\/5 {
+  background-color: rgba(45, 80, 22, 0.05);
+}
+
+.bg-vine-green\/10 {
+  background-color: rgba(45, 80, 22, 0.1);
+}
+
+.bg-vine-green\/20 {
+  background-color: rgba(45, 80, 22, 0.2);
+}
+
+.line-clamp-2 { 
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
