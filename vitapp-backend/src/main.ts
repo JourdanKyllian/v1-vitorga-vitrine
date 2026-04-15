@@ -18,7 +18,7 @@ async function bootstrap() {
     }),
   );
   app.enableCors({
-    origin: ['https://v1-vitorga-vitrine-jourdankyllians-projects.vercel.app/','https://v1-vitorga-vitrine.vercel.app/','http://localhost:4200/', 'http://localhost:5173/', 'http://localhost:3002', 'http://localhost:3000/api','http://localhost:3000'], 
+    origin: ['https://v1-vitorga-vitrine-jourdankyllians-projects.vercel.app/','https://v1-vitorga-vitrine.vercel.app','http://localhost:4200/', 'http://localhost:5173/', 'http://localhost:3002', 'http://localhost:3000/api','http://localhost:3000'], 
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
     credentials: true,
   });
