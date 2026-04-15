@@ -7,13 +7,14 @@ import { AuthModule } from './auth/auth.module';
   imports: [
     TypeOrmModule.forRoot({
       type: 'postgres',
-      host: 'localhost',
+      host: 'aws-1-eu-north-1.pooler.supabase.com',
       port: 5432,
-      username: 'postgres',
-      password: 'postgres',
-      database: 'vitapp',
+      username: 'postgres.qgnwpbbtlpnpuekmcive',
+      password: 'vq2IwRwIiwt1yQBK',
+      database: "postgres",
       autoLoadEntities: true,
       synchronize: true,
+      ssl: { rejectUnauthorized: false }
     }),
     ContentModule,
     AuthModule,
