@@ -1,20 +1,22 @@
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
+import { ConfigModule } from '@nestjs/config';
 import { ContentModule } from './content/content.module';
 import { AuthModule } from './auth/auth.module';
 
 @Module({
   imports: [
+    ConfigModule.forRoot({ isGlobal: true }),
     TypeOrmModule.forRoot({
       type: 'postgres',
-      host: 'aws-1-eu-north-1.pooler.supabase.com',
-      port: 5432,
-      username: 'postgres.qgnwpbbtlpnpuekmcive',
-      password: 'vq2IwRwIiwt1yQBK',
-      database: "postgres",
+      host: process.env.DB_HOST,
+      port: parseInt(process.env.DB_PORT ?? '5432', 10),
+      username: process.env.DB_USERNAME,
+      password: process.env.DB_PASSWORD,
+      database: process.env.DB_NAME,
       autoLoadEntities: true,
       synchronize: true,
-      ssl: { rejectUnauthorized: false }
+      ssl: { rejectUnauthorized: false },
     }),
     ContentModule,
     AuthModule,
